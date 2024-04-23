@@ -1,9 +1,31 @@
-import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
-import { FaComments, FaCreditCard, FaRegHandshake } from "react-icons/fa";
+import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer } from "@chakra-ui/react";
+import { FaComments, FaCreditCard, FaRegHandshake, FaSignInAlt } from "react-icons/fa";
+
+const NavBar = () => {
+  return (
+    <Flex as="nav" py={4} px={8} justifyContent="space-between" alignItems="center" bg="orange.400" color="white">
+      <Text fontSize="lg" fontWeight="bold">
+        InvoiceApp
+      </Text>
+      <Box>
+        <Button variant="ghost" mx={2}>
+          Product
+        </Button>
+        <Button variant="ghost" mx={2}>
+          Pricing
+        </Button>
+        <Button leftIcon={<FaSignInAlt />} colorScheme="teal" variant="solid" mx={2}>
+          Sign In
+        </Button>
+      </Box>
+    </Flex>
+  );
+};
 
 const Index = () => {
   return (
     <Container maxW="container.xl">
+      <NavBar />
       <HeroSection />
       <PricingSection />
     </Container>

@@ -18,7 +18,7 @@ const NavBar = () => {
         <Button variant="ghost" mx={2} as={Link} to="/pricing">
           Pricing
         </Button>
-        <Button leftIcon={<FaSignInAlt />} colorScheme="teal" variant="solid" mx={2} as={Link} to="/signin">
+        <Button leftIcon={<FaSignInAlt />} colorScheme="teal" variant="solid" mx={2} as={Link} to="/login">
           Sign In
         </Button>
       </Box>

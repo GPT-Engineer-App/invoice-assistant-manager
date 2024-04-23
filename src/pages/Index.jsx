@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, HStack, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FaComments, FaCreditCard, FaRegHandshake, FaSignInAlt } from "react-icons/fa";
 
@@ -39,18 +39,27 @@ const Index = () => {
 
 const HeroSection = () => {
   return (
-    <VStack spacing={10} py={20}>
-      <Image src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxpbnZvaWNlJTIwbWFuYWdlbWVudHxlbnwwfHx8fDE3MTM4NjcyNjd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Invoice Management" />
-      <Heading as="h1" size="2xl" textAlign="center">
-        Simplify Your Invoice Management with AI
-      </Heading>
-      <Text fontSize="xl" textAlign="center">
-        Invoice Manager is your AI-powered assistant that integrates seamlessly with your Gmail, Google Drive, and Slack to streamline your invoicing process.
-      </Text>
-      <Button rightIcon={<FaComments />} colorScheme="orange" size="lg" as={Link} to="/chat">
-        Chat with Assistant
-      </Button>
-    </VStack>
+    <HStack spacing={10} py={20} align="center">
+      <VStack spacing={10}>
+        <Image src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxpbnZvaWNlJTIwbWFuYWdlbWVudHxlbnwwfHx8fDE3MTM4NjcyNjd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Invoice Management" />
+        <Heading as="h1" size="2xl" textAlign="center">
+          Simplify Your Invoice Management with AI
+        </Heading>
+        <Text fontSize="xl" textAlign="center">
+          Invoice Manager is your AI-powered assistant that integrates seamlessly with your Gmail, Google Drive, and Slack to streamline your invoicing process.
+        </Text>
+        <Button rightIcon={<FaComments />} colorScheme="orange" size="lg" as={Link} to="/chat">
+          Chat with Assistant
+        </Button>
+      </VStack>
+      <Box p={5} bg="gray.100" rounded="md" boxShadow="xl">
+        <Text fontSize="md" fontWeight="bold">
+          Demo Chat:
+        </Text>
+        <Text fontSize="sm">User: Can you generate an invoice report for last month?</Text>
+        <Text fontSize="sm">Assistant: Sure, generating your invoice report now...</Text>
+      </Box>
+    </HStack>
   );
 };
 

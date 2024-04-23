@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer, Link } from "@chakra-ui/react";
 import { FaComments, FaCreditCard, FaRegHandshake, FaSignInAlt } from "react-icons/fa";
 
 const NavBar = () => {
@@ -11,10 +11,13 @@ const NavBar = () => {
         <Button variant="ghost" mx={2}>
           Product
         </Button>
-        <Button variant="ghost" mx={2}>
+        <Button variant="ghost" mx={2} as={Link} to="/features">
+          Features
+        </Button>
+        <Button variant="ghost" mx={2} as={Link} to="/pricing">
           Pricing
         </Button>
-        <Button leftIcon={<FaSignInAlt />} colorScheme="teal" variant="solid" mx={2}>
+        <Button leftIcon={<FaSignInAlt />} colorScheme="teal" variant="solid" mx={2} as={Link} to="/signin">
           Sign In
         </Button>
       </Box>
@@ -71,11 +74,14 @@ const FeaturesSection = () => {
           Assistant will save the invoices from the given period in your Google Drive.
         </Text>
       </VStack>
-      <Box colSpan={3}>
+      <VStack py={10}>
         <Text fontSize="xl" textAlign="center" color="orange.500" fontWeight="bold">
-          Coming Soon: Payments and Payroll Assistants!
+          Coming Soon
         </Text>
-      </Box>
+        <Text fontSize="lg" textAlign="center" color="orange.500">
+          Payments and Payroll Assistants
+        </Text>
+      </VStack>
     </SimpleGrid>
   );
 };

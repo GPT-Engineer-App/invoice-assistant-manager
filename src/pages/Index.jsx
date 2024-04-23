@@ -27,6 +27,7 @@ const Index = () => {
     <Container maxW="container.xl">
       <NavBar />
       <HeroSection />
+      <FeaturesSection />
       <PricingSection />
     </Container>
   );
@@ -45,6 +46,28 @@ const HeroSection = () => {
       <Button rightIcon={<FaComments />} colorScheme="orange" size="lg">
         Chat with Assistant
       </Button>
+    </VStack>
+  );
+};
+
+const FeaturesSection = () => {
+  return (
+    <VStack spacing={10} py={20} align="center">
+      <Heading as="h3" size="lg" textAlign="center">
+        Key Features
+      </Heading>
+      <Text fontSize="md" textAlign="center">
+        1. Have the assistant extract and analyze invoices in your Gmail.
+      </Text>
+      <Text fontSize="md" textAlign="center">
+        2. Ask him to prepare an invoice report for you (overview of the invoices in the mailbox, invoice details).
+      </Text>
+      <Text fontSize="md" textAlign="center">
+        3. Assistant will save the invoices from the given period in your Google Drive.
+      </Text>
+      <Text fontSize="lg" textAlign="center" color="orange.500">
+        Coming Soon: Payments and Payroll Assistants!
+      </Text>
     </VStack>
   );
 };

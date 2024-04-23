@@ -46,7 +46,7 @@ const HeroSection = () => {
       <Text fontSize="xl" textAlign="center">
         Invoice Manager is your AI-powered assistant that integrates seamlessly with your Gmail, Google Drive, and Slack to streamline your invoicing process.
       </Text>
-      <Button rightIcon={<FaComments />} colorScheme="orange" size="lg">
+      <Button rightIcon={<FaComments />} colorScheme="orange" size="lg" as={Link} to="/chat">
         Chat with Assistant
       </Button>
     </VStack>

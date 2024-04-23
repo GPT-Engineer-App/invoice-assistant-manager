@@ -1,4 +1,5 @@
-import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer, Link } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, SimpleGrid, useColorModeValue, Spacer } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaComments, FaCreditCard, FaRegHandshake, FaSignInAlt } from "react-icons/fa";
 
 const NavBar = () => {

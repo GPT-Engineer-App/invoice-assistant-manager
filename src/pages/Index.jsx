@@ -74,7 +74,7 @@ const FeaturesSection = () => {
           Assistant will save the invoices from the given period in your Google Drive.
         </Text>
       </VStack>
-      <VStack py={10}>
+      <VStack py={10} align="center">
         <Text fontSize="xl" textAlign="center" color="orange.500" fontWeight="bold">
           Coming Soon
         </Text>
